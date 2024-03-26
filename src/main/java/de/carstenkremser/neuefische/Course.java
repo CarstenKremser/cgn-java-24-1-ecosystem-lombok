@@ -1,9 +1,6 @@
 package de.carstenkremser.neuefische;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.List;
 
@@ -11,6 +8,7 @@ import java.util.List;
 @EqualsAndHashCode
 @ToString
 @NoArgsConstructor
+@AllArgsConstructor
 public class Course {
     int id;
     String name;
