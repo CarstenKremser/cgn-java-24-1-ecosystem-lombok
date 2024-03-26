@@ -55,5 +55,10 @@ public class Main {
                 .students(Arrays.stream(students).toList())
                 .build();
         System.out.println(physicsCourse);
+
+        Course changedPhysicsCourse = physicsCourse.withTeacher(teachers[0]);
+        System.out.println("--- changed teacher: two distinct objects");
+        System.out.println(physicsCourse);
+        System.out.println(changedPhysicsCourse);
     }
 }
