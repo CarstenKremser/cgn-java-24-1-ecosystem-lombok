@@ -4,11 +4,7 @@ import lombok.*;
 
 import java.util.List;
 
-@Data
-@EqualsAndHashCode
-@ToString
-@NoArgsConstructor
-@AllArgsConstructor
+@Value // is immutable Variant of @Data - see: https://projectlombok.org/features/Value
 @Builder
 public class Course {
     int id;
