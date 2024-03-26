@@ -1,6 +1,8 @@
 package de.carstenkremser.neuefische;
 
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
 
 public class UniversityService {
     double calcAverageGrade(Course course) {
@@ -23,5 +25,14 @@ public class UniversityService {
             return sumOfGrades / university.courses().length;
         }
         return 0.0;
+    }
+
+    List<Student> goodStudents(University university) {
+        return Arrays.stream(university.courses())
+                .map(course -> {return course.getStudents();})
+                .flatMap(Collection::stream)
+                .filter(student -> student.grade <= 2.0)
+                .distinct()
+                .toList();
     }
 }
