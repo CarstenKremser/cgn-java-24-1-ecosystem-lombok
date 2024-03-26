@@ -8,11 +8,11 @@ public class Main {
     public static void main(String[] args) {
 
         Student[] students = new Student[]{
-                new Student(1,"Anna","Musterstraße 123, 12345 Musterstadt","none"),
-                new Student(2,"Bruno","Blahweg 27, 93175 Xyzstadt","none"),
-                new Student(3,"Carla","Blubballee 64, 76143 Blubbingen","none"),
-                new Student(4,"Dirk","Zuhause 94, 28417 Irgendwo","none"),
-                new Student(5,"Emma","Hier 99, 19762 Dorf","none")
+                new Student(1,"Anna","Musterstraße 123, 12345 Musterstadt",2.0),
+                new Student(2,"Bruno","Blahweg 27, 93175 Xyzstadt",3.1),
+                new Student(3,"Carla","Blubballee 64, 76143 Blubbingen",2.5),
+                new Student(4,"Dirk","Zuhause 94, 28417 Irgendwo",1.8),
+                new Student(5,"Emma","Hier 99, 19762 Dorf",2.1)
         };
 
         Teacher[] teachers = new Teacher[]{
@@ -35,7 +35,7 @@ public class Main {
         aStudent.setId(99);
         aStudent.setName("Zoe");
         aStudent.setAddress("Heimweg 21, 74892 Hierunddort");
-        aStudent.setGrade("unknown");
+        aStudent.setGrade(3.5);
         System.out.println(aStudent);
         aStudent.setId(11);
         System.out.println(aStudent);
@@ -44,7 +44,7 @@ public class Main {
                 .id(50)
                 .name("Xaver")
                 .address("Ichwohneda 45, 32164 ABCStadt")
-                .grade("none")
+                .grade(2.7)
                 .build();
         System.out.println(anotherStudent);
 
