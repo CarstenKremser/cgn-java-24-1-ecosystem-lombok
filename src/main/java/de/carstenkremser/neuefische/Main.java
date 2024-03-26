@@ -31,6 +31,13 @@ public class Main {
         System.out.println(courses.get(0));
         System.out.println(courses.get(1));
 
-
+        Student aStudent = new Student();
+        aStudent.setId(99);
+        aStudent.setName("Zoe");
+        aStudent.setAddress("Heimweg 21, 74892 Hierunddort");
+        aStudent.setGrade("unknown");
+        System.out.println(aStudent);
+        aStudent.setId(11);
+        System.out.println(aStudent);
     }
 }
