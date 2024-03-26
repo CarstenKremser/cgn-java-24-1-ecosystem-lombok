@@ -22,7 +22,7 @@ public class Main {
         };
 
         List<Course> courses = new ArrayList<>();
-        Arrays.stream(new Student[]{students[0]}).toList();
+
         courses.add(new Course(1,"english beginners",teachers[1],
                 Arrays.stream(new Student[]{students[0],students[3],students[4]}).toList()));
         courses.add(new Course(2,"french beginners",teachers[2],
@@ -39,5 +39,21 @@ public class Main {
         System.out.println(aStudent);
         aStudent.setId(11);
         System.out.println(aStudent);
+
+        Student anotherStudent = new Student.StudentBuilder()
+                .id(50)
+                .name("Xaver")
+                .address("Ichwohneda 45, 32164 ABCStadt")
+                .grade("none")
+                .build();
+        System.out.println(anotherStudent);
+
+        Course physicsCourse = new Course.CourseBuilder()
+                .id(42)
+                .name("physics for dummies")
+                .teacher(teachers[2])
+                .students(Arrays.stream(students).toList())
+                .build();
+        System.out.println(physicsCourse);
     }
 }
